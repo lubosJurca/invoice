@@ -22,3 +22,8 @@ export const signUpSchema = z
   });
 
 export type TSignUpSchema = z.infer<typeof signUpSchema>;
+
+export type TFirebaseSignUp = {
+  email: string,
+  password: string
+}

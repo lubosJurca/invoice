@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { signInSchema, TSignInSchema } from '@/lib/types';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { Toaster } from '../ui/sonner';
 import {
   Form,
   FormControl,
@@ -27,6 +28,7 @@ const SignInForm = () => {
   const onSubmit = async (data: TSignInSchema) => {
     console.log(data);
     await new Promise((resolve) => setTimeout(resolve, 1000));
+
     reset();
   };
 
@@ -61,6 +63,7 @@ const SignInForm = () => {
         />
         <Button type='submit'>Submit</Button>
       </form>
+      <Toaster position='top-right' />
     </Form>
   );
 };
